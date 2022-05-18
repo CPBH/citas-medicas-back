@@ -47,6 +47,6 @@ class Api::V1::UsuariosController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def usuario_params
-    params.require(:usuario).permit(:tipo, :tipoDocumento, :numeroDocumento, :nombre, :apellido, :contrasena, :fechaNacimiento, :eps)
+    params.require(:usuario).permit(:tipo, :tipoDocumento, :numeroDocumento, :nombre, :apellido, :email, :contrasena, :fechaNacimiento, :eps)
   end
 end
