@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ordens
+  resources :receta
   resources :historia
   resources :consulta
   namespace :api do
