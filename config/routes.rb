@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :historia
+  resources :consulta
   namespace :api do
     namespace :v1 do
       resources :medicos
