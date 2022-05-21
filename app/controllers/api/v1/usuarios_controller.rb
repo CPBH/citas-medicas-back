@@ -16,6 +16,7 @@ class Api::V1::UsuariosController < ApplicationController
   # POST /usuarios
   def create
     @usuario = Usuario.new(usuario_params)
+    @historia=Historium.new("","","","","")
 
     if @usuario.save
       render :show, status: :created
