@@ -17,8 +17,6 @@ class Api::V1::UsuariosController < ApplicationController
   def create
     @usuario = Usuario.new(usuario_params)
     #@historia = @historia.usuario.create(:numeroDocumento=>@usuario.numeroDocumento,:enfermedades=>"", :medicamentos=>"", :cirugiias=>"", :antecedentes=>"", :resultados=>"")
-    Historium.create()
-    
 
 
     if @usuario.save

@@ -1,4 +1,4 @@
-class HistoriaController < ApplicationController
+class Api::V1::HistoriaController < ApplicationController
   before_action :set_historium, only: %i[ show update destroy ]
 
   # GET /historia
@@ -48,6 +48,6 @@ class HistoriaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def historium_params
-      params.require(:historium).permit(:numeroDocumento,:enfermedades, :medicamentos, :cirugiias, :antecedentes, :resultados)
+      params.require(:historium).permit(:numeroDocumento, :enfermedades, :cirugias, :antecedentes, :resultados)
     end
 end

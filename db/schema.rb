@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_170333) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_174917) do
   create_table "api_v1_medicos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "usuario_id", null: false
     t.string "titulo"
@@ -36,13 +36,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_170333) do
   end
 
   create_table "historia", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "consulta_id"
+    t.string "numeroDocumento"
     t.string "enfermedades"
+    t.string "cirugias"
     t.string "antecedentes"
     t.string "resultados"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["consulta_id"], name: "index_historia_on_consulta_id"
   end
 
   create_table "ordens", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -79,5 +79,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_170333) do
 
   add_foreign_key "api_v1_medicos", "usuarios"
   add_foreign_key "cita", "usuarios"
-  add_foreign_key "historia", "consulta", column: "consulta_id"
 end
