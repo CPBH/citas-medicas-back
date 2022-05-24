@@ -16,7 +16,8 @@ class OrdensController < ApplicationController
   # POST /ordens.json
   def create
     @orden = Orden.new(orden_params)
-    Historia.medicamentos=Historia.medicamentos + @orden.descripcion
+    #Historia.medicamentos=Historia.medicamentos + @orden.descripcion
+    
 
     if @orden.save
       render :show, status: :created, location: @orden

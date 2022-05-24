@@ -16,7 +16,10 @@ class Api::V1::UsuariosController < ApplicationController
   # POST /usuarios
   def create
     @usuario = Usuario.new(usuario_params)
-    @historia=Historium.new("","","","","")
+    #@historia = @historia.usuario.create(:numeroDocumento=>@usuario.numeroDocumento,:enfermedades=>"", :medicamentos=>"", :cirugiias=>"", :antecedentes=>"", :resultados=>"")
+    Historium.create()
+    
+
 
     if @usuario.save
       render :show, status: :created
@@ -48,6 +51,6 @@ class Api::V1::UsuariosController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def usuario_params
-    params.require(:usuario).permit(:tipo, :tipoDocumento, :numeroDocumento, :nombre, :apellido, :email, :contrasena, :fechaNacimiento, :eps)
+    params.require(:usuario).permit(:tipo, :tipoDocumento, :numeroDocumento, :nombre, :apellido, :telefono, :email, :contrasena, :fechaNacimiento, :eps)
   end
 end

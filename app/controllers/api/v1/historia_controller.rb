@@ -48,6 +48,6 @@ class HistoriaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def historium_params
-      params.require(:historium).permit(:usuario_id,:enfermedades, :medicamentos, :cirugiias, :antecedentes, :resultados)
+      params.require(:historium).permit(:numeroDocumento,:enfermedades, :medicamentos, :cirugiias, :antecedentes, :resultados)
     end
 end
