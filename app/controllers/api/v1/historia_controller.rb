@@ -5,11 +5,13 @@ class Api::V1::HistoriaController < ApplicationController
   # GET /historia.json
   def index
     @historia = Historium.all
+    #resources :historia  render json: @historia
   end
 
   # GET /historia/1
   # GET /historia/1.json
   def show
+    render json: @historia
   end
 
   # POST /historia
@@ -18,7 +20,7 @@ class Api::V1::HistoriaController < ApplicationController
     @historium = Historium.new(historium_params)
 
     if @historium.save
-      render :show, status: :created, location: @historium
+      render :show, status: :created
     else
       render json: @historium.errors, status: :unprocessable_entity
     end
