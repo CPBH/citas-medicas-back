@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  decripcion_paciente: MyString
-  string: MyString
+  numeroDocumento: MyString
+  enfermedades: MyString
+  cirugias: MyString
+  medicamentos: MyString
 
 two:
-  decripcion_paciente: MyString
-  string: MyString
+  numeroDocumento: MyString
+  enfermedades: MyString
+  cirugias: MyString
+  medicamentos: MyString

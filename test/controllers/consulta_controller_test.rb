@@ -12,7 +12,7 @@ class ConsultaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create consultum" do
     assert_difference("Consultum.count") do
-      post consulta_url, params: { consultum: { decripcion_paciente: @consultum.decripcion_paciente, string: @consultum.string } }, as: :json
+      post consulta_url, params: { consultum: { cirugias: @consultum.cirugias, enfermedades: @consultum.enfermedades, medicamentos: @consultum.medicamentos, numeroDocumento: @consultum.numeroDocumento } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +24,7 @@ class ConsultaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update consultum" do
-    patch consultum_url(@consultum), params: { consultum: { decripcion_paciente: @consultum.decripcion_paciente, string: @consultum.string } }, as: :json
+    patch consultum_url(@consultum), params: { consultum: { cirugias: @consultum.cirugias, enfermedades: @consultum.enfermedades, medicamentos: @consultum.medicamentos, numeroDocumento: @consultum.numeroDocumento } }, as: :json
     assert_response :success
   end
 

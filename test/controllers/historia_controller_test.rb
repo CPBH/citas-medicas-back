@@ -12,7 +12,7 @@ class HistoriaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create historium" do
     assert_difference("Historium.count") do
-      post historia_url, params: { historium: { antecedentes: @historium.antecedentes, cirugias: @historium.cirugias, enfermedades: @historium.enfermedades, numeroDocumento: @historium.numeroDocumento, resultados: @historium.resultados } }, as: :json
+      post historia_url, params: { historium: { antecedentes: @historium.antecedentes, cirugias: @historium.cirugias, enfermedades: @historium.enfermedades, medicamentos: @historium.medicamentos, numeroDocumento: @historium.numeroDocumento, resultados: @historium.resultados } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +24,7 @@ class HistoriaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update historium" do
-    patch historium_url(@historium), params: { historium: { antecedentes: @historium.antecedentes, cirugias: @historium.cirugias, enfermedades: @historium.enfermedades, numeroDocumento: @historium.numeroDocumento, resultados: @historium.resultados } }, as: :json
+    patch historium_url(@historium), params: { historium: { antecedentes: @historium.antecedentes, cirugias: @historium.cirugias, enfermedades: @historium.enfermedades, medicamentos: @historium.medicamentos, numeroDocumento: @historium.numeroDocumento, resultados: @historium.resultados } }, as: :json
     assert_response :success
   end
 

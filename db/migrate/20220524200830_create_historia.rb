@@ -3,6 +3,7 @@ class CreateHistoria < ActiveRecord::Migration[7.0]
     create_table :historia do |t|
       t.string :numeroDocumento
       t.string :enfermedades
+      t.string :medicamentos
       t.string :cirugias
       t.string :antecedentes
       t.string :resultados

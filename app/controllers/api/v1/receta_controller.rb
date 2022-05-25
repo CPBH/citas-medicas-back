@@ -1,4 +1,4 @@
-class RecetaController < ApplicationController
+class Api::V1::RecetaController < ApplicationController
   before_action :set_recetum, only: %i[ show update destroy ]
 
   # GET /receta
@@ -48,6 +48,6 @@ class RecetaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recetum_params
-      params.require(:recetum).permit(:dosis, :fecha-vencimiento, :entregaxmes, :medicamentos, :descripcion_tratamiento)
+      params.require(:recetum).permit(:dosis, :fecha_vencimiento, :entregaxmes, :medicamentos, :descripcion_tratamiento)
     end
 end
